@@ -10,3 +10,5 @@ nalgebra = {version = "0.32.1", features = ["rand-no-std"]}
 rand = "0.8.5"
 lib-neural-network = { path = "../neural-network" }
 lib-genetic-algorithm = { path = "../genetic-algorithm" }
+serde = "1.0.152"
+serde_json = "1.0.93"

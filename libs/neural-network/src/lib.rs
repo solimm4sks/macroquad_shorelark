@@ -65,6 +65,10 @@ impl Network {
         weights
     }
 
+    pub fn from_weights_inplace(&mut self, layers_topology: &[LayerTopology], weights: impl IntoIterator<Item = f32>){
+        self.layers = Network::from_weights(layers_topology, weights).layers;
+    }
+
     pub fn from_weights(layers: &[LayerTopology], weights: impl IntoIterator<Item = f32>) -> Self {
         assert!(layers.len() > 1);
 
